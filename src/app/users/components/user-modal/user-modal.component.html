@@ -1,0 +1,22 @@
+<div class="modal" *ngIf="visible">
+  <div class="modal-content">
+    <div class="modal-header">
+      <img
+        [src]="user?.avatar"
+        alt="{{ user?.first_name }} {{ user?.last_name }}"
+        class="user-image"
+      />
+    </div>
+    <div class="user-details">
+      <p><span style="font-weight: bold">ID: </span> {{ user?.id }}</p>
+      <p>
+        <span style="font-weight: bold">Full Name: </span
+        >{{ user?.first_name }} {{ user?.last_name }}
+      </p>
+      <p><span style="font-weight: bold">Email: </span> {{ user?.email }}</p>
+    </div>
+    <button class="close" (click)="$event.stopPropagation(); closeModal()">
+      Close
+    </button>
+  </div>
+</div>

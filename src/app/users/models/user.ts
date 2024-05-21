@@ -2,7 +2,7 @@ export interface User {
   // Define all the attributes of the User
   id: number;
   email: string;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   avatar: string;
 }
