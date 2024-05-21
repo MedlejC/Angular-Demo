@@ -1,19 +1,53 @@
-<div class="user-container">
-  <h1>Users List</h1>
-  <div *ngFor="let user of users" class="user-card">
-    <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" />
-    <div class="user-info">
-      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
-      <p>{{ user.email }}</p>
+<div class="main-container">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <img class="logo" src="../../../../assets/elogo.png" height="30px" />
+      <a class="navbar-brand"> EmployeeBook</a>
+      <div class="navbar-collapse">
+        <form class="navbar-form">
+          <input
+            type="search"
+            name="key"
+            id="searchName"
+            class="search-input"
+            placeholder="Search"
+            [(ngModel)]="searchTerm"
+            (ngModelChange)="filterUsers()"
+            required
+          />
+        </form>
+      </div>
     </div>
+  </nav>
+  <app-user-modal
+    [user]="selectedUser"
+    [visible]="modalVisible"
+    (close)="closeModal()"
+  ></app-user-modal>
+  <div class="user-container">
+    <div
+      *ngFor="let user of users"
+      class="user-card"
+      (click)="onOpenModal(user)"
+      id="user-info"
+    >
+      <img
+        [src]="user.avatar"
+        alt="{{ user.first_name }} {{ user.last_name }}"
+      />
+      <div class="user-info">
+        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+    <div class="navigation">
+      <button (click)="previousPage()" [disabled]="currentPage === 1">
+        Previous
+      </button>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+        Next
+      </button>
+    </div>
+    <p>Page {{ currentPage }} of {{ totalPages }}</p>
   </div>
-  <div class="navigation">
-    <button (click)="previousPage()" [disabled]="currentPage === 1">
-      Previous
-    </button>
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
-      Next
-    </button>
-  </div>
-  <p>Page {{ currentPage }} of {{ totalPages }}</p>
 </div>
