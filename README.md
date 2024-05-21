@@ -1,27 +1,56 @@
-# AngularDemo
+# EmployeeBook - Angular Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+<p align="center"> 
+<img src="https://skillicons.dev/icons?i=angular,vscode"/>
+</p>
 
-## Development server
+## Project Description
+EmployeeBook is a web application developed using Angular. It allows users to browse through a paginated list of employees, search for employees by name and ID, and view detailed information about each employee in a modal dialog.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- List employees with pagination.
+- Search employees by their first name, last name, or ID.
+- View detailed information about employees in a modal.
+- Responsive design.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
 
-## Build
+Before you begin, ensure you have met the following requirements:
+- Node.js (version 12.x or higher)
+- npm (Node Package Manager)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+To install EmployeeBook, follow these steps:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+	  ```bash 
+	  git clone https://github.com/MedlejC/Angular-Demo.git
+  2. Navigate to the project directory:
+	  ```bash
+	  cd Angular-Demo
+  3. Install the dependencies:
+     ```bash
+     npm install
+     
+## Usage
+To start the application, run the following command:     
+```bash
+ng serve
+```
+Navigate to `http://localhost:4200/` to view the application.
 
-## Running end-to-end tests
+## Screenshots and Demos
+- **Homepage:**
+  ![image](https://github.com/MedlejC/Angular-Demo/assets/127014173/83045a8b-5ef2-4de0-a752-0965c7cc8a23)
+  <br></br>
+- **Searching by Name:**
+  ![image](https://github.com/MedlejC/Angular-Demo/assets/127014173/d88b63b7-430a-4426-b330-7ccfd90d77c3)
+  <br></br>
+- **Searching by ID:**
+  ![image](https://github.com/MedlejC/Angular-Demo/assets/127014173/2e4f1ec0-f81f-462f-bdc7-e203c7b0dc65)
+  <br></br>
+- **Modal:**
+  ![image](https://github.com/MedlejC/Angular-Demo/assets/127014173/5b2705cd-9a9a-4c6e-a15f-7c02c75398e5)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
